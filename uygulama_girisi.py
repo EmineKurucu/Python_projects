@@ -1,6 +1,6 @@
 def main():
     email = input("Email : ")
-    parola = input("Parola: ")
+    parola = input("Parola: ").rstrip()
     
     if isMail_correct(email):
         if isParola_correct(parola):
