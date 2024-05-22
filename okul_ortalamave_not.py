@@ -7,22 +7,23 @@ def main():
             yazili1 = float(input("1. yazili notunuzu giriniz: "))
             if yazili1 > 100 or yazili1 <0: 
                 raise ValueError("Hata: Sinav notu 100'den buyuk veya 0'dan kucuk olamaz.")
+                
             yazili2 = float(input("2. yazili notunuzu giriniz : "))
             if yazili2 > 100 or yazili2 <0: 
                 raise ValueError("Hata: Sinav notu 100'den buyuk veya 0'dan kucuk olamaz.")
-            sozlu = int(input("Sozlu nutunuzu giriniz : "))
+                
+            sozlu = float(input("Sozlu nutunuzu giriniz : "))
             if sozlu > 100 or sozlu <0: 
                 raise ValueError("Hata: Sozlu notu 100'den buyuk veya 0'dan kucuk olamaz.")
+                
             break; 
         except ValueError:
             print("Hata: Gecerli bir deger giriniz : ")
         except Exception as e:
             print(f"Hata : Beklenmedik bir hata oluştu {e}.")
-            
-    print(f"Ortalamaniz : {ortalama_hesaplama(yazili1, yazili2, sozlu):.2f}")
+
     ortalama = ortalama_hesaplama(yazili1, yazili2, sozlu)
-        
-        
+    print(f"Ortalamaniz : {ortalama_hesaplama(yazili1, yazili2, sozlu):.2f}")    
     print(f"Not : {Not_hesaplama(ortalama)}" )
         
 
